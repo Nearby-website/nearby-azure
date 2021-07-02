@@ -1,0 +1,208 @@
+,Sno,countryLabel,coordinate_location,country1,country_id
+0,1.0,Afghanistan,Point(66.0 34.0),افغانستان,af
+1,2.0,Albania,Point(20.0 41.0),Shqipëria,al
+2,3.0,Algeria,Point(1.0 28.0),Algérie / ⵍⵣⵣⴰⵢⴻⵔ / الجزائر,dz
+3,4.0,American Samoa,Point(-170.7075 -14.295833),United States,us
+4,5.0,Andorra,Point(1.555277777 42.558333333),Andorra,ad
+5,6.0,Angola,Point(17.35 -12.35),Angola,ao
+6,7.0,Antigua and Barbuda,Point(-61.85 17.116666666),Antigua and Barbuda,ag
+7,8.0,Argentina,Point(-64.0 -34.0),Argentina,ar
+8,9.0,Aruba,Point(-69.97422388 12.51106253),Nederland,nl
+9,10.0,Australia,Point(137.0 -28.0),Australia,au
+10,11.0,Austria,Point(14.0 48.0),Österreich,at
+11,12.0,Bahrain,Point(50.551111 26.0675),البحرين,bh
+12,13.0,Bangladesh,Point(89.866667 24.016667),বাংলাদেশ,bd
+13,14.0,Barbados,Point(-59.5525 13.17),Barbados,bb
+14,15.0,Belarus,Point(28.046666666 53.528333333),Беларусь,by
+15,16.0,Benin,Point(2.183333333 8.833333333),Bénin,bj
+16,17.0,Bhutan,Point(90.5 27.45),འབྲུག་ཡུལ་,bt
+17,18.0,Bolivia,Point(-64.991228611 -17.056869611),Bolivia,bo
+18,19.0,Botswana,Point(23.7 -22.2),Botswana,bw
+19,20.0,Brazil,Point(-53.0 -14.0),Brasil,br
+20,21.0,Brunei,Point(114.566667 4.4),Brunei,bn
+21,22.0,Bulgaria,Point(25.5 42.75),Бългaрия,bg
+22,23.0,Burkina Faso,Point(-2.066667 12.266667),Burkina Faso,bf
+23,24.0,Burundi,Point(29.816667 -3.666667),Burundi,bi
+24,25.0,Cambodia,Point(105.0 12.6),ព្រះរាជាណាចក្រ​កម្ពុជា,kh
+25,26.0,Cameroon,Point(12.0 7.0),Cameroun,cm
+26,27.0,Canada,Point(-109.0 56.0),Canada,ca
+27,28.0,Cape Verde,Point(-24.083333333 15.916666666),Cabo Verde,cv
+28,29.0,Central African Republic,Point(20.9 6.7),Ködörösêse tî Bêafrîka - République Centrafricaine,cf
+29,30.0,Chad,Point(19.4 15.466667),Tchad تشاد,td
+30,31.0,Chile,Point(-71.0 -33.0),Chile,cl
+31,32.0,Colombia,Point(-74.0 4.0),Colombia,co
+32,33.0,Comoros,Point(44.44553 -12.23333),Comores Komori جزر القمر,km
+33,34.0,Cook Islands,Point(-159.783333333 -21.233333333),Kūki 'Āirani,ck
+34,35.0,Costa Rica,Point(-84.0 10.0),Costa Rica,cr
+35,36.0,Croatia,Point(15.466667 45.25),Hrvatska,hr
+36,37.0,Cuba,Point(-79.5 22.0),Cuba,cu
+37,38.0,Cyprus,Point(33.0 35.0),Κύπρος - Kıbrıs,cy
+38,39.0,Czech Republic,Point(16.0 50.0),Česko,cz
+39,40.0,Danish Realm,Point(-6.844444444 61.97),Føroyar,fo
+40,41.0,Democratic Republic of the Congo,Point(23.656 -2.88),République démocratique du Congo,cd
+41,42.0,Denmark,Point(10.0 56.0),Danmark,dk
+42,43.0,Djibouti,Point(42.433333 11.8),Djibouti جيبوتي,dj
+43,44.0,Dominica,Point(-61.333333 15.416667),Dominica,dm
+44,45.0,Dominican Republic,Point(-70.2 18.8),República Dominicana,do
+45,46.0,East Timor,Point(125.75 -8.966667),Timór Lorosa'e,tl
+46,47.0,Ecuador,Point(-78.0 -1.0),Ecuador,ec
+47,48.0,Egypt,Point(29.0 27.0),مصر,eg
+48,49.0,El Salvador,Point(-88.866111 13.668889),El Salvador,sv
+49,50.0,Eritrea,Point(38.25 15.483333),ኤርትራ Eritrea إرتريا,er
+50,51.0,Ethiopia,Point(40.0 9.0),ኢትዮጵያ,et
+51,52.0,Federated States of Micronesia,Point(158.183333333 6.916666666),Micronesia,fm
+52,53.0,Fiji,Point(178.0 -18.0),Viti,fj
+53,54.0,Finland,Point(27.0 65.0),Suomi / Finland,fi
+54,55.0,France,Point(2.0 47.0),France,fr
+55,56.0,Gagauzia,Point(28.666389 46.316389),Moldova,md
+56,57.0,Galicia,Point(-8.133333333 43.05),España,es
+57,58.0,Germany,Point(10.0 51.0),Deutschland,de
+58,59.0,Ghana,Point(-0.5 8.0),Ghana,gh
+59,60.0,Greece,Point(23.0 38.5),Ελλάς,gr
+60,61.0,Grenada,Point(-61.666667 12.116667),Grenada,gd
+61,62.0,Guatemala,Point(-90.25 15.5),Guatemala,gt
+62,63.0,Guinea,Point(-11.0 10.0),Guinée,gn
+63,64.0,Guinea-Bissau,Point(-15.0 12.0),Guiné-Bissau,gw
+64,65.0,Guyana,Point(-59.316667 5.733333),Guyana,gy
+65,66.0,Haiti,Point(-72.8 19.0),Ayiti,ht
+66,67.0,Honduras,Point(-86.816667 14.633333),Honduras,hn
+67,68.0,Hungary,Point(19.0 47.0),Magyarország,hu
+68,69.0,Imperial State of Iran,, , 
+69,70.0,India,Point(83.0 22.8),India,in
+70,71.0,Indonesia,Point(118.0 -2.0),Indonesia,id
+71,72.0,Iran,Point(53.0 32.0),ایران,ir
+72,73.0,Iraq,Point(43.0 33.0),العراق / عێراق,iq
+73,74.0,Ireland,Point(-8.0 53.0),Éire / Ireland,ie
+74,75.0,Israel,Point(35.0 31.0),ישראל,il
+75,76.0,Italy,Point(12.5 42.5),Italia,it
+76,77.0,Ivory Coast,Point(-6.0 8.0),Côte d’Ivoire,ci
+77,78.0,Jamaica,Point(-77.4 18.18),Jamaica,jm
+78,79.0,Japan,Point(136.0 35.0),日本,jp
+79,80.0,Jordan,Point(36.5 31.2),الأردن,jo
+80,81.0,Kazakhstan,Point(68.0 48.0),Қазақстан,kz
+81,82.0,Kenya,Point(38.0 0.1),Kenya,ke
+82,83.0,Kingdom of Africa,Point(33.747777777 21.869166666),السودان,sd
+83,84.0,Kingdom of the Netherlands,Point(4.883333333 52.366666666),Nederland,nl
+84,85.0,Kiribati,Point(173.033333333 1.466666666),Kiribati,ki
+85,86.0,Kyrgyzstan,Point(75.0 41.0),Кыргызстан,kg
+86,87.0,Laos,Point(104.0 18.2),ประเทศไทย,th
+87,88.0,Latvia,Point(25.0 57.0),Latvija,lv
+88,89.0,Lebanon,Point(35.766667 33.833333),لبنان,lb
+89,90.0,Lesotho,Point(28.25 -29.55),Lesotho,ls
+90,91.0,Liberia,Point(-9.75 6.533333),Liberia,lr
+91,92.0,Libya,Point(17.0 27.0),ليبيا,ly
+92,93.0,Liechtenstein,Point(9.553889 47.145),Liechtenstein,li
+93,94.0,Madagascar,Point(47.0 -20.0),Madagasikara,mg
+94,95.0,Malawi,Point(34.0 -13.0),Malawi,mw
+95,96.0,Malaysia,Point(108.0 3.0),Indonesia,id
+96,97.0,Maldives,Point(73.51 4.18),ދިވެހިރާއްޖެ,mv
+97,98.0,Mali,Point(-4.0 17.0),Mali,ml
+98,99.0,Malta,Point(14.5 35.883333333),Malta,mt
+99,100.0,Marshall Islands,Point(171.066666666 7.116666666),Ṃajeḷ,mh
+100,101.0,Mauritania,Point(-11.0 21.0),موريتانيا,mr
+101,102.0,Mauritius,Point(57.5 -20.2),Mauritius,mu
+102,103.0,Mexico,Point(-102.0 23.0),México,mx
+103,104.0,Mongolia,Point(104.0 47.0),Монгол улс ᠮᠤᠩᠭᠤᠯ ᠤᠯᠤᠰ,mn
+104,105.0,Montenegro,Point(19.216667 42.766667),Crna Gora / Црна Гора,me
+105,106.0,Morocco,Point(-6.0 32.0),Maroc / ⵍⵎⵖⵔⵉⴱ / المغرب,ma
+106,107.0,Mozambique,Point(35.0 -19.0),Moçambique,mz
+107,108.0,Myanmar,Point(96.0 22.0),မြန်မာ,mm
+108,109.0,Namibia,Point(17.0 -23.0),Namibia,na
+109,110.0,Nauru,Point(166.933333333 -0.533333333),Naoero,nr
+110,111.0,Nepal,Point(84.0 28.0),नेपाल,np
+111,112.0,Netherlands,Point(5.55 52.316666666),Nederland,nl
+112,113.0,New Zealand,Point(174.0 -41.2),New Zealand / Aotearoa,nz
+113,114.0,Nicaragua,Point(-85.0 13.0),Nicaragua,ni
+114,115.0,Niger,Point(10.0 17.0),Niger,ne
+115,116.0,Nigeria,Point(8.0 9.0),Nigeria,ng
+116,117.0,Niue,Point(-169.916666666 -19.05),Niuē,nu
+117,118.0,North Korea,Point(127.0 40.0),조선민주주의인민공화국,kp
+118,119.0,Northern Mariana Islands,Point(145.78 16.705),United States,us
+119,120.0,Norway,Point(11.0 65.0),Norge,no
+120,121.0,Oman,Point(57.0 21.0),عمان,om
+121,122.0,Pakistan,Point(71.0 30.0),پاکستان,pk
+122,123.0,Palau,Point(134.55 7.466667),Belau,pw
+123,124.0,Papua New Guinea,Point(147.0 -6.3),Papua Niugini,pg
+124,125.0,Paraguay,Point(-58.0 -23.5),Paraguay,py
+125,126.0,People's Republic of China,Point(103.451944444 35.844722222),中国,cn
+126,127.0,Peru,Point(-76.0 -9.4),Perú,pe
+127,128.0,Philippines,Point(123.0 12.0),Mindanao,ph
+128,129.0,Poland,Point(19.0 52.0),Polska,pl
+129,130.0,Portugal,Point(-9.183333333 38.7),Portugal,pt
+130,131.0,Qatar,Point(51.212767 25.269535),قطر,qa
+131,132.0,Republic of Artsakh,Point(46.716666666 39.866666666),Azərbaycan,az
+132,133.0,Republic of the Congo,Point(15.383330555 -0.75),Congo,cg
+133,134.0,Romania,Point(25.0 46.0),România,ro
+134,135.0,Rwanda,Point(29.873888888 -1.940277777),Rwanda,rw
+135,136.0,São Tomé and Príncipe,Point(6.6 0.316667),São Tomé e Príncipe,st
+136,137.0,Saint Kitts and Nevis,Point(-62.666667 17.33),Saint Kitts and Nevis,kn
+137,138.0,Saint Lucia,Point(-61.0 13.883333),Saint Lucia,lc
+138,139.0,Saint Vincent and the Grenadines,Point(-61.233333333 13.166666666),Saint Vincent and the Grenadines,vc
+139,140.0,Samoa,Point(-172.0 -14.0),Sāmoa,ws
+140,141.0,Saudi Arabia,Point(44.116667 23.716667),السعودية,sa
+141,142.0,Senegal,Point(-14.283333 14.366667),Sénégal,sn
+142,143.0,Seychelles,Point(52.766667 -7.1),Sesel,sc
+143,144.0,Sierra Leone,Point(-12.1 8.5),Sierra Leone,sl
+144,145.0,Singapore,Point(103.8 1.3),Singapore,sg
+145,146.0,Sint Maarten,Point(-63.067777777 18.031944444),Nederland,nl
+146,147.0,Slovakia,Point(20.0 49.0),Slovensko,sk
+147,148.0,Solomon Islands,Point(159.816666666 -9.466666666),Solomon Islands,sb
+148,149.0,Somalia,Point(47.0 6.0),جمهورية أرض الصومال Jamhuuriyadda Soomaaliland,so
+149,150.0,Somaliland,Point(46.2 9.8),جمهورية أرض الصومال Jamhuuriyadda Soomaaliland,so
+150,151.0,South Africa,Point(24.0 -29.0),South Africa,za
+151,152.0,South Korea,Point(128.0 36.0),대한민국,kr
+152,153.0,South Sudan,Point(30.0 7.0),South Sudan,ss
+153,154.0,Sri Lanka,Point(81.0 7.0),ශ්‍රී ලංකාව இலங்கை,lk
+154,155.0,Sudan,Point(32.0 15.0),السودان,sd
+155,156.0,Sweden,Point(15.0 61.0),Sverige,se
+156,157.0,Switzerland,Point(8.231973 46.798562),Schweiz/Suisse/Svizzera/Svizra,ch
+157,158.0,Syria,Point(38.583333 35.216667),سوريا,sy
+158,159.0,Taiwan,Point(121.0 24.0),臺灣,tw
+159,160.0,Tajikistan,Point(71.366667 38.583333),Тоҷикистон,tj
+160,161.0,Tanzania,Point(34.854 -6.307),Tanzania,tz
+161,162.0,Thailand,Point(101.0 14.0),ประเทศไทย,th
+162,163.0,The Bahamas,Point(-76.4 23.7),The Bahamas,bs
+163,164.0,The Gambia,Point(-15.5 13.5),Gambia,gm
+164,165.0,Togo,Point(1.183333 8.25),Togo,tg
+165,166.0,Transnistria,Point(29.624444444 46.842222222),Moldova,md
+166,167.0,Trinidad and Tobago,Point(-61.516666666 10.666666666),Trinidad and Tobago,tt
+167,168.0,Tunisia,Point(10.0 34.0),تونس,tn
+168,169.0,Turkey,Point(36.0 39.0),Türkiye,tr
+169,170.0,Turkmenistan,Point(60.0 39.0),Türkmenistan,tm
+170,171.0,Tuvalu,Point(178.005556 -7.475), , 
+171,172.0,Uganda,Point(32.39 1.28),Uganda,ug
+172,173.0,United Arab Emirates,Point(54.3 24.4),الإمارات العربية المتحدة,ae
+173,174.0,United Kingdom,Point(-2.0 54.6),United Kingdom,gb
+174,175.0,United States of America,Point(-98.5795 39.828175),United States,us
+175,176.0,Uruguay,Point(-56.65 -32.733333333),Uruguay,uy
+176,177.0,Uzbekistan,Point(66.0 41.0),Oʻzbekiston,uz
+177,178.0,Vanuatu,Point(168.016669444 -16.633330555),Vanuatu,vu
+178,179.0,Venezuela,Point(-67.0 8.0),Venezuela,ve
+179,180.0,Vietnam,Point(108.0 16.0),Việt Nam,vn
+180,181.0,Wales,Point(-3.633333333 52.35),United Kingdom,gb
+181,182.0,Yemen,Point(48.0 15.5),اليمن,ye
+182,183.0,Zambia,Point(28.0 -14.0),Zambia,zm
+183,184.0,Zimbabwe,Point(30.0 -19.0),Zimbabwe,zw
+184,,Armenia,Point(44.95 40.383333),Հայաստան,am
+185,,Azerbaijan,Point(47.7 40.3),Azərbaycan,az
+186,,Belgium,Point(4.668055555 50.641111111),België / Belgique / Belgien,be
+187,,Bosnia and Herzegovina,Point(18.0 44.0),Bosna i Hercegovina / Босна и Херцеговина,ba
+188,,Estonia,Point(26.0 59.0),Eesti,ee
+189,,Eswatini,Point(31.433333 -26.483333),eSwatini,sz
+190,,Faroe Islands,Point(-6.844480555 61.969944444),Føroyar,fo
+191,,Georgia,Point(43.733330555 42.016669444),საქართველო,ge
+192,,Guernsey,Point(-2.583333333 49.45),Guernsey,gg
+193,,Hong Kong,	Point(114.158611111 22.278333333),中国,cn
+194,,Iceland,Point(-19.0 65.0),Ísland,is
+195,,Isle of Man,Point(-4.525 54.235),Isle of Man,im
+196,,Lithuania,	Point(24.0 55.2),Lietuva,lt
+197,,Luxembourg,Point(6.13 49.77),Lëtzebuerg,lu
+198,,Moldova,Point(28.516667 47.25),Moldova,md
+199,,North Macedonia,Point(21.716667 41.65),Северна Македонија,mk
+200,,Panama,	Point(-80.366667 8.616667),Panamá,pa
+201,,Russia,Point(94.25 66.416666666),Россия,ru
+202,,Serbia,Point(20.933333333 43.95),Србија,rs
+203,,Slovenia,Point(15.0 46.0),Slovenija,si
+204,,Spain,Point(-3.5 40.2),España,es
+205,,Suriname,Point(-56.0 4.0),Suriname,sr
+206,,Ukraine,	Point(32.0 49.0),Україна,ua

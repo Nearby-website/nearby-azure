@@ -1,0 +1,96 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script type="text/javascript" src="{{url_for('static',filename = 'mapsjs-service.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static',filename = 'mapsjs-mapevents.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static',filename = 'mapsjs-ui.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'mapsjs-ui.css')}}">
+    <style type="text/css">
+      #map{
+        height : 700px;
+      }
+      .log {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        height: 150px;
+        width: 250px;
+        overflow: scroll;
+        background: white;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 12px;
+      }
+      .log-entry {
+        padding: 5px;
+        border-bottom: 1px solid #d0d9e9;
+      }
+      .log-entry:nth-child(odd) {
+          background-color: #e1e7f1;
+      }
+    </style>
+
+  <title>Maps</title>
+  <base href="/static/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="styles.31d6cfe0d16ae931b73c.css"></head>
+<body id="markers-on-the-map">
+  <div id="map"></div>
+  <app-root></app-root>
+  <input type="text" id="location"/>
+<script src="runtime.f772f49a33ad1c2491b1.js" defer></script><script src="polyfills.1ca95cdda1848640c2c4.js" defer></script><script src="main.e15e4fc8c6c7d77f2a76.js" defer></script>
+<script type="text/javascript">
+  function setUpClickListener(map) {
+    // Attach an event listener to map display
+    // obtain the coordinates and display in an alert box.
+    map.addEventListener('tap', function (evt) {
+      var coord = map.screenToGeo(evt.currentPointer.viewportX,
+              evt.currentPointer.viewportY);
+              var a = document.getElementById("location");
+              a.value = coord['lat'],coord['lng'];
+            console.log(coord['lat'],coord['lng']);
+      logEvent('Clicked at ' + Math.abs(coord.lat.toFixed(4)) +
+          ((coord.lat > 0) ? 'N' : 'S') +
+          ' ' + Math.abs(coord.lng.toFixed(4)) +
+           ((coord.lng > 0) ? 'E' : 'W'));
+    });
+  }
+  
+  var platform = new H.service.Platform({
+    'apikey': '30z_Pp6_ciL5B-ubeh3o_W1yEAQuRss-BC_NSmnuibk'
+  });
+  var defaultLayers = platform.createDefaultLayers();
+  var map = new H.Map(document.getElementById('map'),
+    defaultLayers.vector.normal.map,{
+    center: {lat: 17, lng: 78},
+    zoom: 5,
+    pixelRatio: window.devicePixelRatio || 1
+  });
+  var berlinMarker = new H.map.Marker({
+    lat:17.4961,
+    lng: 78.4401
+  });
+  map.addObject(berlinMarker);
+  var berlinMarker = new H.map.Marker({
+    lat:19.4961,
+    lng: 80.4401
+  });
+  map.addObject(berlinMarker);
+  window.addEventListener('resize', () => map.getViewPort().resize());
+  var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+  var logContainer = document.createElement('ul');
+  logContainer.className ='log';
+  logContainer.innerHTML = '<li class="log-entry">Try clicking on the map</li>';
+  map.getElement().appendChild(logContainer);
+  function logEvent(str) {
+    var entry = document.createElement('li');
+    entry.className = 'log-entry';
+    entry.textContent = str;
+    logContainer.insertBefore(entry, logContainer.firstChild);
+  }
+  setUpClickListener(map);
+      </script>
+</body>
+</html>
