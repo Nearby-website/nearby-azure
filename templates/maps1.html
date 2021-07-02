@@ -105,8 +105,8 @@
     var f = true;
     function addMarkerToGroup(group, coordinate, html) {
       // var icon = new H.map.Icon('{{url_for("static",filename = "images.jpg")}}');
-      var icon = new H.map.Icon("{{url_for('static',filename='Logo.png')}}");
-      var marker = new H.map.Marker(coordinate,{icon:icon });
+      // var icon = new H.map.Icon("{{url_for('static',filename='Logo.png')}}");
+      var marker = new H.map.Marker(coordinate);
       // add custom data to the marker
       marker.setData(html);
   
@@ -155,7 +155,7 @@ function zoom(number){
      
       d = document.getElementById("browser");
       dist = document.getElementById("distance")
-      url = "https://placesnearby.azurewebsites.net/"+ (lat).toString()+"_"+(lon).toString()+"_"+d.value+"_"+dist.value;
+      url = "http://127.0.0.1:5000/"+ (lat).toString()+"_"+(lon).toString()+"_"+d.value+"_"+dist.value;
       fetch(url).then((response)=>{
         return response.json();
       }).then((data)=>{
@@ -170,6 +170,7 @@ function zoom(number){
         {
           Parent.removeChild(Parent.firstChild);
         }
+        if( data['list'].length>0){
         var row = Parent.insertRow(-1);
         
             var headerCell = document.createElement("TH");
@@ -202,6 +203,11 @@ function zoom(number){
           map.addObject(berlinMarker);
          addInfoBubble(map,data);
       }
+    }
+    else{
+      di = Document.createElement("tab");
+      tab.value = "Oops!!. We didn't find data";
+    }
         console.log(data);
       })
     }
@@ -218,7 +224,7 @@ function setUpClickListener(map) {
           if(f == true){
           addCircleToMap(map,lat,lon);
           }
-          url = "https://placesnearby.azurewebsites.net/"+ (coord['lat']).toString()+"_"+(coord['lng']).toString();
+          url = "http://127.0.0.1:5000/"+ (coord['lat']).toString()+"_"+(coord['lng']).toString();
       fetch(url).then((response)=>{
         return response.text();
       }).then((data)=>{
@@ -244,11 +250,11 @@ var map = new H.Map(document.getElementById('map'),
   pixelRatio: window.devicePixelRatio || 1
 });
 var icon = new H.map.Icon("{{url_for('static',filename='Logo.png')}}");
-var berlinMarker = new H.map.Marker({
-  lat:17.4961,
-  lng: 78.4401,
-},{icon: icon});
-map.addObject(berlinMarker);
+// var berlinMarker = new H.map.Marker({
+//   lat:17.4961,
+//   lng: 78.4401,
+// },{icon: icon});
+// map.addObject(berlinMarker);
 
 window.addEventListener('resize', () => map.getViewPort().resize());
 var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
