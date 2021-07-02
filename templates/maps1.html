@@ -143,7 +143,7 @@ function addInfoBubble(map,data) {
       f = false;
       d = document.getElementById("browser");
       dist = document.getElementById("distance")
-      url = "http://127.0.0.1:5000/"+ (lat).toString()+"_"+(lon).toString()+"_"+d.value+"_"+dist.value;
+      url = "https://placesnearby.azurewebsites.net/"+ (lat).toString()+"_"+(lon).toString()+"_"+d.value+"_"+dist.value;
       fetch(url).then((response)=>{
         return response.json();
       }).then((data)=>{
@@ -206,7 +206,7 @@ function setUpClickListener(map) {
           if(f == true){
           addCircleToMap(map,lat,lon);
           }
-          url = "http://127.0.0.1:5000/"+ (coord['lat']).toString()+"_"+(coord['lng']).toString();
+          url = "https://placesnearby.azurewebsites.net/"+ (coord['lat']).toString()+"_"+(coord['lng']).toString();
       fetch(url).then((response)=>{
         return response.text();
       }).then((data)=>{
