@@ -106,17 +106,16 @@
     function addMarkerToGroup(group, coordinate, html) {
       // var icon = new H.map.Icon('{{url_for("static",filename = "images.jpg")}}');
       var icon = new H.map.Icon("{{url_for('static',filename='Logo.png')}}");
-  var marker = new H.map.Marker(coordinate,{icon:icon });
-  // add custom data to the marker
-  marker.setData(html);
+      var marker = new H.map.Marker(coordinate,{icon:icon });
+      // add custom data to the marker
+      marker.setData(html);
   
-  group.addObject(marker);
+      group.addObject(marker);
 }
 
 
 function addInfoBubble(map,data) {
   var group = new H.map.Group();
-
   map.addObject(group);
   group.addEventListener('tap', function (evt) {
     var bubble = new H.ui.InfoBubble(evt.target.getGeometry(), {
@@ -138,9 +137,22 @@ function addInfoBubble(map,data) {
     var lon = null;
     var table = document.getElementById("myTable");
 
+function zoom(number){
+    if(number<=30){
+      return 11;
+    }
+    if(number<=50){
+      return 9.5;
+    }
+    if(number<80){
+      return 8.5;
+    }
+    return 10;
+}
+
     function getdata(){
       console.log(lat,lon);
-      f = false;
+     
       d = document.getElementById("browser");
       dist = document.getElementById("distance")
       url = "https://placesnearby.azurewebsites.net/"+ (lat).toString()+"_"+(lon).toString()+"_"+d.value+"_"+dist.value;
@@ -153,7 +165,7 @@ function addInfoBubble(map,data) {
         map.removeObjects(map.getObjects ());
         addCircleToMap(map,lat,lon);
         map.setCenter({lat:lat,lng:lon});
-        map.setZoom(12);
+        map.setZoom(zoom(dist.value));
         while(Parent.hasChildNodes())
         {
           Parent.removeChild(Parent.firstChild);
@@ -254,11 +266,12 @@ var ui = H.ui.UI.createDefault(map, defaultLayers);
 setUpClickListener(map);
 
 function addCircleToMap(map,lat1,lon1){
+  var radius = map.getZoom();
   map.addObject(new H.map.Circle(
     // The central point of the circle
     {lat:lat1, lng:lon1},
     // The radius of the circle in meters
-    3000,
+    (16-radius)*300,
     // {
     //   style: {
     //     strokeColor: 'rgba(55, 85, 170, 0.6)', // Color of the perimeter
