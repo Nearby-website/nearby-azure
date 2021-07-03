@@ -17,7 +17,7 @@
 <script src="https://kit.fontawesome.com/7654ab4b19.js" crossorigin="anonymous"></script>
 <style type="text/css">
       #map{
-        height : 700px;
+        height : 400px;
       }
       .log {
         position: absolute;
@@ -52,14 +52,16 @@
         console.log(data);
       })
       </script> -->
-      <div class="container-fluid mx-auto w-50 mt-3">
+      <div class="container-fluid  mt-3 ">
         <h1 class="text-dark text-center fw-bolder"><i class="fas fa-map-marker-alt"></i> NEARBY</h1>
+      <div class="row  ">
+
       
-      <div class="form-group m-2">
-        <label for="area" class="fw-bold">Location <span class="fw-normal">(Select on Map to get the location)</span></label>
+      <div class="form-group m-1 col-md-3 ">
+        <label for="area" class="fw-bold">Location <span class="fw-lighter">(Select on Map to get location)</span></label>
         <input type="text" id="area" name="Location" class="form-control" style="width: 300px;"/>
       </div>
-      <div class="form-group m-2">
+      <div class="form-group m-1 col-md-3 ">
         <label for="browser" class="fw-bold">Choice</label>
         <select name="Entity" id="browser" class="form-control">
           <option value="init" selected>Select your choice</option>
@@ -82,23 +84,34 @@
           <option value="Beaches">
         </datalist>
       </div> -->
-    <div class="form-group m-2">
+    <div class="form-group m-1 col-md-3 ">
       <label for="distance" class="fw-bold">Distance</label>
       <input type="number" id="distance" class="form-control" name="Distance"/>
 
     </div>
-  
-  <button type="submit" onclick="getdata()" class="btn btn-outline-primary m-2 mb-3 btn-md">Submit</button>
+    <div class="form-group m-1 col-md-2 ">
+    <button type="submit" onclick="getdata()" class="btn btn-outline-primary mt-4 btn-md form-control fw-bold"><i class="fas fa-map-marked-alt mx-2"></i>Locate</button>
+  </div>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-md-1"></div>
+  <div id="map" class=" mt-4 col-md-6 px-4 "></div>
+  <div class="col-md-1"></div>
+  <div class="col-md-3 px-4">
+  <table id="myTable" class="table table-hover table-bordered  mx-auto d-block mt-4 ">
+    <thead>
+      <th>Name</th>
+      <th>Distance</th>
+    </thead>
+  </table>
 </div>
-    <!-- <p>This example displays a map of the world. Clicking on the map displays an alert box containing the latitude and longitude of the location pressed.</p> -->
-    <div id="map" class="w-75 mx-auto d-block mt-4 "></div>
+  <div class="col-md-1"></div>
+  </div>  
+  <!-- <p>This example displays a map of the world. Clicking on the map displays an alert box containing the latitude and longitude of the location pressed.</p> -->
+    
     <h1 id="choice"></h1>
-    <table id="myTable" class="table table-hover table-bordered w-75 mx-auto d-block mt-4">
-      <thead>
-        <th>Name</th>
-        <th>Distance</th>
-      </thead>
-    </table>
+    
     <br>
     
     <script type="text/javascript">
