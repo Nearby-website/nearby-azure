@@ -57,7 +57,8 @@ def abc(name):
     l1 = l[0]
     l2 = l[1]
     ent = l[2]
-    dist = l[3]
+    dist = int1(l[3])
+    dist = min(dist,100)
     try:
       if(ent in d):
           Latitude = str(l1)
@@ -74,13 +75,15 @@ def abc(name):
                   lat2,lon2 = get_coords(i[-2])
                   c_dist = distance(int1(Latitude),lat2,int1(Longitude),lon2)
                   # print(c_dist)
-                  if c_dist<=int1(dist):
+                  if c_dist<=(dist):
                       i1 = [i[0],i[1],get_coords(i[2]),round(c_dist,1)]
                       lis.append(i1)
               # print(lis)
               return {'status':"success",'list' : lis}
+      # print("abc")
       return {'status':"failed"}
-    except:
+    except Exception as e:
+      print(e)
       return {'status':"failed"}
 
 if __name__ == '__main__':

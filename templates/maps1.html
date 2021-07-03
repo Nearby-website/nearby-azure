@@ -4,7 +4,7 @@
     <link rel="shortcut icon" href="#">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-    <title>Calculating a Location from a Mouse Click</title>
+    <title>NearBy</title>
     
     <!-- http://127.0.0.1:5000/static/styles/omv/miami/normal.day.yam -->
     <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
@@ -45,6 +45,39 @@
       .log-entry:nth-child(odd) {
           background-color: #e1e7f1;
       }
+
+      /* Style #1 */
+     
+
+      .loading--full-height {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        visibility: hidden;
+      }
+
+      .loading::after {
+        content: "";
+        width: 50px;
+        height: 50px;
+        border: 10px solid #dddddd;
+        border-top-color: #009579;
+        border-radius: 50%;
+        transform: rotate(0.16turn);
+        animation: loading 1s ease infinite;
+      }
+
+      @keyframes loading {
+        /* Safari support */
+        from {
+          transform: rotate(0turn);
+        }
+        
+        to {
+          transform: rotate(1turn);
+        }
+      }
     </style>
 
   <body id="markers-on-the-map">
@@ -66,7 +99,7 @@
       
       <div class="form-group m-1 col-md-3 ">
         <label for="area" class="fw-bold">Location <span class="fw-lighter">(Select on Map to get location)</span></label>
-        <input type="text" id="area" name="Location" class="form-control" style="width: 300px;"/>
+        <input type="text" id="area" name="Location" class="form-control" style="width: 300px;" readonly/>
       </div>
       <div class="form-group m-1 col-md-3 ">
         <label for="browser" class="fw-bold">Choice</label>
@@ -92,7 +125,8 @@
         </datalist>
       </div> -->
     <div class="form-group m-1 col-md-3 ">
-      <label for="distance" class="fw-bold">Distance</label>
+
+      <label for="distance" class="fw-bold">Distance<span class="fw-lighter">(Enter a value less than 100)</span></label>
       <input type="number" id="distance" class="form-control" name="Distance"/>
 
     </div>
@@ -103,25 +137,27 @@
   </div>
   <div class="row">
   <div class="col-md-1"></div>
+  <!-- <div id="buffer" class="loading loading--full-height"></div> -->
   <div id="map" class=" mt-4 col-md-6 px-4 "></div>
   <div class="col-md-1"></div>
   <div class="col-md-3 px-4">
   <table id="myTable" class="table table-hover table-bordered  mx-auto d-block mt-4 ">
-    <thead>
+    <!-- <thead>
       <th>Name</th>
       <th>Distance</th>
-    </thead>
+    </thead> -->
   </table>
-  <img src="{{url_for('static',filename='404.PNG')}}" class="w-90" >
+  <img src="{{url_for('static',filename='404.PNG')}}" id = "404" class="w-90" style="visibility: hidden" >
   <h1 id="tab" class="fw-bold"></h1>
 </div>
   <div class="col-md-1"></div>
   </div>  
   <!-- <p>This example displays a map of the world. Clicking on the map displays an alert box containing the latitude and longitude of the location pressed.</p> -->
     
-    <h1 id="choice"></h1>
+    <!-- <h1 id="choice"></h1> -->
     
     <h1 id="tab" class="fw-bold"></h1>
+    
     
     <br>
     
@@ -174,17 +210,18 @@ function zoom(number){
     return 10;
 }
 
+
+
     function getdata(){
       console.log(lat,lon);
-     
       d = document.getElementById("browser");
       dist = document.getElementById("distance")
       url = "https://placesnearby.azurewebsites.net/"+ (lat).toString()+"_"+(lon).toString()+"_"+d.value+"_"+dist.value;
       fetch(url).then((response)=>{
         return response.json();
       }).then((data)=>{
-        choice = document.getElementById("choice");
-        choice.value = d.value;
+        console.log(data);
+        
         var Parent = document.getElementById("myTable");
         map.removeObjects(map.getObjects ());
         addCircleToMap(map,lat,lon);
@@ -195,8 +232,10 @@ function zoom(number){
           Parent.removeChild(Parent.firstChild);
         }
         if( data['list'].length>0){
+        table.createCaption();
+        table.innerHTML = "<b>"+(d.value)+"</b>";
         var row = Parent.insertRow(-1);
-        
+            
             var headerCell = document.createElement("TH");
             headerCell.innerHTML = "S.No";
             row.appendChild(headerCell);
@@ -228,13 +267,19 @@ function zoom(number){
          addInfoBubble(map,data);
       }
     }
+    
     else{
-      di = Document.createElement("tab");
-      tab.value = "Oops!!. We didn't find data";
+      di = document.getElementById("tab");
+      di.textContent = "Oops!!. We didn't find data";
+      dimg = document.getElementById("404");
+      dimg.style.visibility = 'visible';
     }
-        console.log(data);
+       
       })
+      
     }
+
+
 function setUpClickListener(map) {
   
   map.addEventListener('tap', function (evt) {
@@ -269,8 +314,8 @@ var platform = new H.service.Platform({
 var defaultLayers = platform.createDefaultLayers();
 var map = new H.Map(document.getElementById('map'),
   defaultLayers.vector.normal.map,{
-  center: {lat: 17, lng: 78},
-  zoom: 5,
+  center: {lat: 17.857347477709546, lng: 79.49018328885033},
+  zoom: 6.8,
   pixelRatio: window.devicePixelRatio || 1
 });
 var icon = new H.map.Icon("{{url_for('static',filename='Logo.png')}}");
